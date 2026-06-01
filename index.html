@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
@@ -421,6 +421,16 @@
     opacity:.96;
     filter:drop-shadow(0 7px 16px rgba(0,0,0,.10));
   }
+  .slide:not(:first-child) .chrome{
+    justify-content:flex-start;
+    gap:1.5em;
+    padding-right:150px;
+  }
+  .slide:not(:first-child) .chrome > div:last-child{
+    padding-left:1.5em;
+    border-left:1px solid currentColor;
+    opacity:.76;
+  }
   .slide.dark .brand-mark{filter:drop-shadow(0 8px 20px rgba(0,0,0,.28))}
   .cover-logo{
     width:min(20vw,230px);
@@ -543,6 +553,15 @@
     font-weight:700;
     line-height:1.2;
   }
+  .store-area{
+    margin-left:.55em;
+    font-family:var(--sans-zh);
+    font-size:.56em;
+    font-weight:500;
+    letter-spacing:.08em;
+    opacity:.52;
+    white-space:nowrap;
+  }
   .store-meta{
     font-family:var(--sans-zh);
     font-size:max(12px,.96vw);
@@ -563,6 +582,86 @@
     letter-spacing:.1em;
     text-transform:uppercase;
   }
+  .partner-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:0 2.4vw;
+    margin-top:2vh;
+  }
+  .partner-col{
+    border-top:1px solid rgba(127,127,127,.28);
+  }
+  .partner-item{
+    display:flex;
+    align-items:flex-start;
+    gap:.7vw;
+    padding:.78vh 0;
+    border-bottom:1px solid rgba(127,127,127,.22);
+    font-family:var(--sans-zh);
+    font-size:max(10px,.8vw);
+    line-height:1.28;
+  }
+  .partner-item b{
+    flex:0 0 auto;
+    font-family:var(--mono);
+    font-size:max(9px,.68vw);
+    font-weight:500;
+    letter-spacing:.08em;
+    opacity:.42;
+  }
+  .partner-logo-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    grid-template-rows:repeat(3,1fr);
+    gap:1.5vh 1.2vw;
+    margin-top:2.2vh;
+    min-height:0;
+  }
+  .partner-logo-card{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    min-height:0;
+    padding:1.1vh .8vw .9vh;
+    background:transparent;
+  }
+  .partner-logo-card img{
+    width:92%;
+    height:5.2vh;
+    object-fit:contain;
+    display:block;
+    mix-blend-mode:multiply;
+  }
+  .partner-logo-card img.logo-tall{height:6.6vh}
+  .partner-logo-card.logo-compact img{width:78%;height:4.6vh}
+  .partner-logo-card.logo-water img{width:98%;height:6.6vh}
+  .partner-logo-card.logo-giuseppe img{width:98%;height:7.2vh}
+  .partner-logo-card.logo-sinopec img{width:98%;height:7.5vh}
+  .partner-wordmark{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:5.2vh;
+    font-family:var(--sans-zh);
+    font-size:1.36vw;
+    font-weight:900;
+    letter-spacing:.06em;
+    line-height:1;
+    text-align:center;
+  }
+  .partner-logo-name{
+    margin-top:.8vh;
+    padding-top:.35vh;
+    width:100%;
+    font-family:var(--sans-zh);
+    font-size:max(10px,.76vw);
+    line-height:1.2;
+    text-align:center;
+    opacity:.76;
+  }
+  .sinopec{color:#e60012}.cnpc{color:#e5231f}.state-grid{color:#008f84}
+  .ecnu{color:#004b91}.tz-water{color:#008bc5}.tz-airport{color:#1366a8}.wenlan{color:#176b67}
   .quote-giant{
     font-family:var(--serif-zh);
     font-size:5.2vw;
@@ -688,18 +787,18 @@
      ============================================================ -->
 
 <section class="slide hero light" data-animate="hero">
-  <div class="chrome"><div>GOONE OUTDOOR · MALL PITCH</div><div>01 / 17</div></div>
+  <div class="chrome"><div>GOONE OUTDOOR · MALL PITCH</div><div>01 / 18</div></div>
   <div class="frame cover-grid">
     <div>
       <img class="cover-logo" src="images/goone-logo.png" alt="古壹户外标识" data-anim>
-      <div class="kicker" data-anim>2009 · HANGZHOU · CITY OUTDOOR</div>
+      <div class="kicker" data-anim>2008 · HANGZHOU · CITY OUTDOOR</div>
       <h1 class="cover-title" data-anim>古壹户外</h1>
-      <p class="lead" style="max-width:48vw;margin-top:2.6vh" data-anim>深耕杭州 18 年的城市户外生活方式集合店。</p>
+      <p class="lead" style="max-width:48vw;margin-top:2.6vh" data-anim>深耕杭州 19 年的城市户外生活方式集合店。</p>
       <div class="cover-tags" data-anim><span>城市机能</span><span>专业装备</span><span>社群活动</span><span>品牌专区</span></div>
     </div>
     <div class="cover-panel" data-anim>
-      <div class="stat-card"><div class="stat-label">Founded</div><div class="stat-nb">2009</div><div class="stat-note">始创于杭州。</div></div>
-      <div class="stat-card"><div class="stat-label">Industry</div><div class="stat-nb">18<span class="stat-unit">年</span></div><div class="stat-note">户外行业深耕。</div></div>
+      <div class="stat-card"><div class="stat-label">Founded</div><div class="stat-nb">2008</div><div class="stat-note">始创于杭州。</div></div>
+      <div class="stat-card"><div class="stat-label">Industry</div><div class="stat-nb">19<span class="stat-unit">年</span></div><div class="stat-note">户外行业深耕。</div></div>
       <div class="stat-card"><div class="stat-label">Brands</div><div class="stat-nb">90+</div><div class="stat-note">品牌授权矩阵。</div></div>
       <div class="stat-card"><div class="stat-label">Community</div><div class="stat-nb">1000+</div><div class="stat-note">运动户外社群。</div></div>
     </div>
@@ -709,9 +808,9 @@
 
 <section class="slide light">
   <img class="brand-mark" src="images/goone-logo.png" alt="古壹户外">
-  <div class="chrome"><div>Identity · Brand Position</div><div>02 / 17</div></div>
+  <div class="chrome"><div>Identity · Brand Position</div><div>02 / 18</div></div>
   <div class="frame grid-2-7-5" style="padding-top:6vh">
-    <div><div class="kicker" data-anim>我们是谁</div><h2 class="h-xl" data-anim>深耕杭州 18 年的城市户外多品牌集合店。</h2><p class="lead" style="margin-top:3vh" data-anim>古壹户外 GOONE 深度整合专业户外装备、都市机能穿搭、户外社群运营、山野生活体验四大核心板块，打破传统户外零售的单一模式。</p></div>
+    <div><div class="kicker" data-anim>我们是谁</div><h2 class="h-xl" data-anim>深耕杭州 19 年的城市户外多品牌集合店。</h2><div data-anim style="margin-top:2.6vh;padding:1.8vh 1.5vw;border-left:3px solid currentColor;background:rgba(var(--ink-rgb),.055)"><div class="meta" style="margin-bottom:.8vh;opacity:.55">GOONE OUTDOOR · SLOGAN</div><div style="font-family:var(--serif-zh);font-size:2.35vw;font-weight:700;line-height:1.2;letter-spacing:.08em">城野两栖，壹种自由</div></div><p class="lead" style="margin-top:2.4vh;font-size:1.55vw;line-height:1.55" data-anim>古壹户外 GOONE 深度整合专业户外装备、都市机能穿搭、户外社群运营、山野生活体验四大核心板块，打破传统户外零售的单一模式。</p></div>
     <div data-anim><div class="compact-list"><div><b>01</b><span>品牌核心态度：一家有温度的户外品牌。</span></div><div><b>02</b><span>文化内核：自然、环保、快乐。</span></div><div><b>03</b><span>陪伴消费者走进山野、拥抱自然，在户外场景中收获成长与治愈。</span></div><div><b>04</b><span>让户外成为日常生活的美好选择。</span></div></div><div class="callout" style="margin-top:4vh"><span class="q-big">对商场而言，古壹不是单一零售品牌，而是自带社群、自带内容、自带活动能力的特色生活方式业态。</span></div></div>
   </div>
   <div class="foot"><div>Positioning</div><div>GOONE</div></div>
@@ -719,7 +818,7 @@
 
 <section class="slide light">
   <img class="brand-mark" src="images/goone-logo.png" alt="古壹户外">
-  <div class="chrome"><div>Value · Lifestyle</div><div>03 / 17</div></div>
+  <div class="chrome"><div>Value · Lifestyle</div><div>03 / 18</div></div>
   <div class="frame" style="padding-top:7vh">
     <div class="kicker" data-anim>经营理念 / 价值观 / Slogan</div><h2 class="h-xl" style="max-width:78vw" data-anim>打破“户外在远方”的固有认知。</h2><p class="lead" style="max-width:72vw;margin-top:3vh" data-anim>将专业户外生活从山野带回城市，让通勤穿搭、周末徒步、假日露营、日常跑步、轻量山野出行，都成为普通人的日常生活方式。</p>
     <div class="grid-3" style="margin-top:6vh"><div class="mag-card" data-anim><div class="label">Professional</div><div class="title">以专业为本</div><div class="desc">懂装备、懂场景、懂用户需求。</div></div><div class="mag-card" data-anim><div class="label">User First</div><div class="title">以用户为核心</div><div class="desc">以服务和体验建立长期关系。</div></div><div class="mag-card" data-anim><div class="label">Content Driven</div><div class="title">以内容为驱动</div><div class="desc">用活动、社群和会员体系持续传递城市户外文化。</div></div></div>
@@ -728,86 +827,92 @@
 </section>
 
 <section class="slide light">
-  <img class="brand-mark" src="images/goone-logo.png" alt="古壹户外"><div class="chrome"><div>Proof · Outdoor DNA</div><div>04 / 17</div></div>
-  <div class="frame" style="padding-top:6vh"><div class="kicker" data-anim>户外基因与长期主义</div><h2 class="h-xl" data-anim>真正由资深户外人创办，长期立足户外圈层。</h2><div class="grid-4" style="margin-top:6vh"><div class="stat-card" data-anim><div class="stat-label">Founded</div><div class="stat-nb">2009</div><div class="stat-note">扎根杭州，持续深耕本土城市户外市场。</div></div><div class="stat-card" data-anim><div class="stat-label">Industry</div><div class="stat-nb">18<span class="stat-unit">年</span></div><div class="stat-note">行业深耕，理解消费趋势与用户痛点。</div></div><div class="stat-card" data-anim><div class="stat-label">Stores</div><div class="stat-nb">3<span class="stat-unit">家</span></div><div class="stat-note">杭州直营门店稳定运营。</div></div><div class="stat-card" data-anim><div class="stat-label">Brands</div><div class="stat-nb">90+</div><div class="stat-note">国内外一线户外品牌正规授权。</div></div></div></div>
+  <img class="brand-mark" src="images/goone-logo.png" alt="古壹户外"><div class="chrome"><div>Proof · Outdoor DNA</div><div>04 / 18</div></div>
+  <div class="frame" style="padding-top:6vh"><div class="kicker" data-anim>户外基因与长期主义</div><h2 class="h-xl" data-anim>真正由资深户外人创办，长期立足户外圈层。</h2><div class="grid-4" style="margin-top:6vh"><div class="stat-card" data-anim><div class="stat-label">Founded</div><div class="stat-nb">2008</div><div class="stat-note">扎根杭州，持续深耕本土城市户外市场。</div></div><div class="stat-card" data-anim><div class="stat-label">Industry</div><div class="stat-nb">19<span class="stat-unit">年</span></div><div class="stat-note">行业深耕，理解消费趋势与用户痛点。</div></div><div class="stat-card" data-anim><div class="stat-label">Stores</div><div class="stat-nb">3<span class="stat-unit">家</span></div><div class="stat-note">杭州直营门店稳定运营。</div></div><div class="stat-card" data-anim><div class="stat-label">Brands</div><div class="stat-nb">90+</div><div class="stat-note">国内外一线户外品牌正规授权。</div></div></div></div>
   <div class="foot"><div>Outdoor Native Team</div><div>GOONE</div></div>
 </section>
 
 <section class="slide hero light">
-  <img class="brand-mark" src="images/goone-logo.png" alt="古壹户外"><div class="chrome"><div>History · Local Accumulation</div><div>05 / 17</div></div>
-  <div class="frame" style="padding-top:5vh"><div class="kicker" data-anim>15 年本土沉淀</div><h2 class="h-xl" data-anim>从杭州本土门店，到城市户外生活方式综合服务体系。</h2><div class="pipeline-section" data-anim><div class="pipeline-label">Milestones</div><div class="pipeline" data-cols="4"><div class="step"><div class="step-nb">2009</div><div class="step-title">品牌创立</div><div class="step-desc">扎根杭州，开启专业户外零售与城市户外文化深耕。</div></div><div class="step"><div class="step-nb">2022</div><div class="step-title">亚运公园店</div><div class="step-desc">拓展城北核心商圈布局。</div></div><div class="step"><div class="step-nb">2023</div><div class="step-title">全面升级</div><div class="step-desc">品牌专区、会员体系、企微私域、线上线下一体化运营落地。</div></div><div class="step"><div class="step-nb">2025</div><div class="step-title">滨江店开业</div><div class="step-desc">完善城南核心布局，实现杭州多区域全域覆盖。</div></div></div></div></div>
+  <img class="brand-mark" src="images/goone-logo.png" alt="古壹户外"><div class="chrome"><div>Stores · Hangzhou Network</div><div>05 / 18</div></div>
+  <div class="frame" style="padding-top:5vh"><div class="kicker" data-anim>三店联动 / 门店布局</div><h2 class="h-xl" data-anim>杭州三大核心区位，成熟线下运营与流量承接。</h2><div class="store-grid" data-anim><div class="store-card"><figure class="frame-img" style="aspect-ratio:4/3;max-height:36vh"><img src="images/10-store-s1.jpg" alt="滨江店" style="object-position:center 45%"></figure><div class="store-name">滨江店<span class="store-area">滨江区</span></div><div class="store-meta">城南核心商圈及居住集群。</div></div><div class="store-card"><figure class="frame-img" style="aspect-ratio:4/3;max-height:36vh"><img src="images/10-store-gaoji-street.png" alt="高技街店" style="object-position:center 40%"></figure><div class="store-name">高技街店<span class="store-area">西湖区</span></div><div class="store-meta">城西核心消费人群与成熟户外客群。</div></div><div class="store-card"><figure class="frame-img" style="aspect-ratio:4/3;max-height:36vh"><img src="images/10-store-gongshu-canal-park.png" alt="拱墅运河体育公园店" style="object-position:center 45%"></figure><div class="store-name">拱墅运河体育公园店<span class="store-area">拱墅区</span></div><div class="store-meta">城北核心商圈，拓展城市户外服务版图。</div></div></div></div>
+  <div class="foot"><div>3 Stores</div><div>Hangzhou</div></div>
+</section>
+
+<section class="slide hero light">
+  <img class="brand-mark" src="images/goone-logo.png" alt="古壹户外"><div class="chrome"><div>History · Local Accumulation</div><div>06 / 18</div></div>
+  <div class="frame" style="padding-top:5vh"><div class="kicker" data-anim>19 年本土沉淀</div><h2 class="h-xl" data-anim>从杭州本土门店，到城市户外生活方式综合服务体系。</h2><div class="pipeline-section" data-anim><div class="pipeline-label">Milestones</div><div class="pipeline" data-cols="4"><div class="step"><div class="step-nb">2008</div><div class="step-title">品牌创立</div><div class="step-desc">扎根杭州，开启专业户外零售与城市户外文化深耕。</div></div><div class="step"><div class="step-nb">2022</div><div class="step-title">亚运公园店</div><div class="step-desc">拓展城北核心商圈布局。</div></div><div class="step"><div class="step-nb">2023</div><div class="step-title">全面升级</div><div class="step-desc">品牌专区、会员体系、企微私域、线上线下一体化运营落地。</div></div><div class="step"><div class="step-nb">2025</div><div class="step-title">滨江店开业</div><div class="step-desc">完善城南核心布局，实现杭州多区域全域覆盖。</div></div></div></div></div>
   <div class="foot"><div>Timeline</div><div>Hangzhou</div></div>
 </section>
 
 <section class="slide light">
-  <img class="brand-mark" src="images/goone-logo.png" alt="古壹户外"><div class="chrome"><div>Market · New Retail</div><div>06 / 17</div></div>
-  <div class="frame grid-2-6-6" style="padding-top:7vh"><div><div class="kicker" data-anim>市场变化与品牌优化背景</div><h2 class="h-xl" data-anim>传统卖货型门店，已无法适配当下市场。</h2><p class="lead" style="margin-top:3vh" data-anim>消费者不再满足于单纯购买户外产品，而是转向品质消费、体验消费、精神消费，更看重生活方式认同、专业服务、圈层归属和沉浸式体验。</p></div><div data-anim><div class="compact-list"><div><b>Ⅰ</b><span>传统实体零售：以货品陈列和购买为中心。</span></div><div><b>Ⅱ</b><span>纯电商零售：效率提升，但场景体验不足。</span></div><div><b>Ⅲ</b><span>社交碎片化零售：内容增长，线下承接分散。</span></div><div><b>Ⅳ</b><span>户外新零售：整合产品、服务、场景、社群与文化。</span></div></div><div class="callout" style="margin-top:4vh"><span class="q-big">商场需要的不只是一个户外店，而是能持续创造内容、活动与复购的生活方式入口。</span></div></div></div>
-  <div class="foot"><div>Industry Shift</div><div>New Retail</div></div>
-</section>
-
-<section class="slide light">
-  <img class="brand-mark" src="images/goone-logo.png" alt="古壹户外"><div class="chrome"><div>Upgrade · Operating System</div><div>07 / 17</div></div>
-  <div class="frame" style="padding-top:6vh"><div class="kicker" data-anim>古壹的品牌优化方向</div><h2 class="h-xl" data-anim>一站式城市户外生活方式体验空间。</h2><div class="grid-3-3" style="margin-top:5vh"><div class="mag-card" data-anim><div class="label">01</div><div class="title">头部品牌专区</div><div class="desc">打造高端专业户外品牌专属展示、体验、销售空间。</div></div><div class="mag-card" data-anim><div class="label">02</div><div class="title">全场景专业服务</div><div class="desc">装备选购、适配推荐、养护调试、场景搭配。</div></div><div class="mag-card" data-anim><div class="label">03</div><div class="title">精细化会员社群</div><div class="desc">分层运营会员，深耕户外圈层。</div></div><div class="mag-card" data-anim><div class="label">04</div><div class="title">常态化户外活动</div><div class="desc">徒步、夜爬、跑步、露营、亲子户外等多元活动。</div></div><div class="mag-card" data-anim><div class="label">05</div><div class="title">全域私域运营</div><div class="desc">线上种草、线下体验、私域留存复购形成闭环。</div></div></div></div>
-  <div class="foot"><div>Five-In-One</div><div>Retail + Community</div></div>
-</section>
-
-<section class="slide light">
-  <img class="brand-mark" src="images/goone-logo.png" alt="古壹户外"><div class="chrome"><div>Brand Matrix · One Stop</div><div>08 / 17</div></div>
+  <img class="brand-mark" src="images/goone-logo.png" alt="古壹户外"><div class="chrome"><div>Brand Matrix · One Stop</div><div>07 / 18</div></div>
   <div class="frame grid-2-6-6" style="padding-top:6vh"><div><div class="kicker" data-anim>全品类品牌矩阵</div><h2 class="h-xl" data-anim>90+ 一线品牌，覆盖通勤、运动、山野、休闲。</h2><div class="compact-list" data-anim><div><b>服装</b><span>THE NORTH FACE、KAILAS、Houdini、Montbell 等高端户外机能品牌。</span></div><div><b>鞋履</b><span>HOKA、On、LOWA 等，覆盖越野跑、徒步、登山、日常通勤。</span></div><div><b>装备</b><span>OSPREY、COROS、Black Diamond 等专业户外装备品牌。</span></div></div></div><div data-anim style="padding-top:3vh"><figure class="frame-img fit-contain" style="aspect-ratio:1491/1055"><img src="images/08-brand-matrix-clean.png" alt="品牌矩阵"></figure><div class="brand-strip" style="margin-top:2vh"><span>KAILAS</span><span>HOKA</span><span>Houdini</span><span>Montbell</span><span>LOWA</span><span>OSPREY</span></div></div></div>
   <div class="foot"><div>Product Matrix</div><div>90+ Brands</div></div>
 </section>
 
 <section class="slide light">
-  <img class="brand-mark" src="images/goone-logo.png" alt="古壹户外"><div class="chrome"><div>Premium Zone · Mall Value</div><div>09 / 17</div></div>
-  <div class="frame" style="padding-top:5vh"><div class="kicker" data-anim>核心品牌专区</div><h2 class="h-xl" data-anim>高端品牌专区，为商场带来差异化体验场景。</h2><div class="zone-grid" data-anim><div class="zone-card"><figure class="frame-img" style="aspect-ratio:4/3;max-height:32vh"><img src="images/09-zone-kailas.jpg" alt="凯乐石 KAILAS 专区"></figure><div class="store-name">凯乐石 KAILAS</div><div class="store-meta">场景化陈列与专业化服务，强化门店专业形象。</div></div><div class="zone-card"><figure class="frame-img" style="aspect-ratio:4/3;max-height:32vh"><img src="images/09-zone-klattermusen.jpg" alt="攀山鼠专区"></figure><div class="store-name">攀山鼠</div><div class="store-meta">沉浸式品牌展示，提升高端户外业态层级。</div></div><div class="zone-card"><figure class="frame-img" style="aspect-ratio:4/3;max-height:32vh"><img src="images/09-zone-houdini.jpg" alt="Houdini 专区"></figure><div class="store-name">Houdini</div><div class="store-meta">新品体验、专属活动、装备养护等会员增值服务。</div></div></div></div>
-  <div class="foot"><div>Premium Outdoor Retail</div><div>Image slots reserved</div></div>
-</section>
-
-<section class="slide hero light">
-  <img class="brand-mark" src="images/goone-logo.png" alt="古壹户外"><div class="chrome"><div>Stores · Hangzhou Network</div><div>10 / 17</div></div>
-  <div class="frame" style="padding-top:5vh"><div class="kicker" data-anim>三店联动 / 门店布局</div><h2 class="h-xl" data-anim>杭州三大核心区位，成熟线下运营与流量承接。</h2><div class="store-grid" data-anim><div class="store-card"><figure class="frame-img" style="aspect-ratio:4/3;max-height:36vh"><img src="images/10-store-s1.jpg" alt="滨江店" style="object-position:center 45%"></figure><div class="store-name">滨江店</div><div class="store-meta">城南核心商圈及居住集群。</div></div><div class="store-card"><figure class="frame-img" style="aspect-ratio:4/3;max-height:36vh"><img src="images/10-store-s2.jpg" alt="高技街店" style="object-position:center 40%"></figure><div class="store-name">高技街店</div><div class="store-meta">城西核心消费人群与成熟户外客群。</div></div><div class="store-card"><figure class="frame-img" style="aspect-ratio:4/3;max-height:36vh"><img src="images/10-store-s3.jpg" alt="亚运公园店" style="object-position:center 45%"></figure><div class="store-name">亚运公园店</div><div class="store-meta">城北核心商圈，拓展城市户外服务版图。</div></div></div></div>
-  <div class="foot"><div>3 Stores</div><div>Hangzhou</div></div>
+  <img class="brand-mark" src="images/goone-logo.png" alt="古壹户外"><div class="chrome"><div>Market · New Retail</div><div>08 / 18</div></div>
+  <div class="frame grid-2-6-6" style="padding-top:7vh"><div><div class="kicker" data-anim>市场变化与品牌优化背景</div><h2 class="h-xl" data-anim>传统卖货型门店，已无法适配当下市场。</h2><p class="lead" style="margin-top:3vh" data-anim>消费者不再满足于单纯购买户外产品，而是转向品质消费、体验消费、精神消费，更看重生活方式认同、专业服务、圈层归属和沉浸式体验。</p></div><div data-anim><div class="compact-list"><div><b>Ⅰ</b><span>传统实体零售：以货品陈列和购买为中心。</span></div><div><b>Ⅱ</b><span>纯电商零售：效率提升，但场景体验不足。</span></div><div><b>Ⅲ</b><span>社交碎片化零售：内容增长，线下承接分散。</span></div><div><b>Ⅳ</b><span>户外新零售：整合产品、服务、场景、社群与文化。</span></div></div><div class="callout" style="margin-top:4vh"><span class="q-big">商场需要的不只是一个户外店，而是能持续创造内容、活动与复购的生活方式入口。</span></div></div></div>
+  <div class="foot"><div>Industry Shift</div><div>New Retail</div></div>
 </section>
 
 <section class="slide light">
-  <img class="brand-mark" src="images/goone-logo.png" alt="古壹户外"><div class="chrome"><div>Mall Cooperation · Core Value</div><div>11 / 17</div></div>
+  <img class="brand-mark" src="images/goone-logo.png" alt="古壹户外"><div class="chrome"><div>Upgrade · Operating System</div><div>09 / 18</div></div>
+  <div class="frame" style="padding-top:6vh"><div class="kicker" data-anim>古壹的品牌优化方向</div><h2 class="h-xl" data-anim>一站式城市户外生活方式体验空间。</h2><div class="grid-3-3" style="margin-top:5vh"><div class="mag-card" data-anim><div class="label">01</div><div class="title">头部品牌专区</div><div class="desc">打造高端专业户外品牌专属展示、体验、销售空间。</div></div><div class="mag-card" data-anim><div class="label">02</div><div class="title">全场景专业服务</div><div class="desc">装备选购、适配推荐、养护调试、场景搭配。</div></div><div class="mag-card" data-anim><div class="label">03</div><div class="title">精细化会员社群</div><div class="desc">分层运营会员，深耕户外圈层。</div></div><div class="mag-card" data-anim><div class="label">04</div><div class="title">常态化户外活动</div><div class="desc">徒步、夜爬、跑步、越野跑、露营、亲子户外等多元活动。</div></div><div class="mag-card" data-anim><div class="label">05</div><div class="title">全域私域运营</div><div class="desc">线上种草、线下体验、私域留存复购形成闭环。</div></div></div></div>
+  <div class="foot"><div>Five-In-One</div><div>Retail + Community</div></div>
+</section>
+
+<section class="slide light">
+  <img class="brand-mark" src="images/goone-logo.png" alt="古壹户外"><div class="chrome"><div>Premium Zone · Mall Value</div><div>10 / 18</div></div>
+  <div class="frame" style="padding-top:5vh"><div class="kicker" data-anim>核心品牌专区</div><h2 class="h-xl" data-anim>高端品牌专区，为商场带来差异化体验场景。</h2><div class="zone-grid" data-anim><div class="zone-card"><figure class="frame-img" style="aspect-ratio:4/3;max-height:32vh"><img src="images/09-zone-kailas.jpg" alt="凯乐石 KAILAS 专区"></figure><div class="store-name">凯乐石 KAILAS</div><div class="store-meta">场景化陈列与专业化服务，强化门店专业形象。</div></div><div class="zone-card"><figure class="frame-img" style="aspect-ratio:4/3;max-height:32vh"><img src="images/09-zone-klattermusen-new.png" alt="攀山鼠专区"></figure><div class="store-name">攀山鼠</div><div class="store-meta">沉浸式品牌展示，提升高端户外业态层级。</div></div><div class="zone-card"><figure class="frame-img" style="aspect-ratio:4/3;max-height:32vh"><img src="images/09-zone-houdini.jpg" alt="Houdini 专区"></figure><div class="store-name">Houdini</div><div class="store-meta">新品体验、专属活动、装备养护等会员增值服务。</div></div></div></div>
+  <div class="foot"><div>Premium Outdoor Retail</div><div>Image slots reserved</div></div>
+</section>
+
+<section class="slide light">
+  <img class="brand-mark" src="images/goone-logo.png" alt="古壹户外"><div class="chrome"><div>Mall Cooperation · Core Value</div><div>11 / 18</div></div>
   <div class="frame" style="padding-top:6vh"><div class="kicker" data-anim>商场合作核心价值</div><h2 class="h-xl" data-anim>填补商场业态空白，激活消费活力，稳定持续引流。</h2><div class="grid-4" style="margin-top:6vh"><div class="mag-card" data-anim><div class="label">Traffic</div><div class="title">高质量精准客群</div><div class="desc">提升商场整体客群层级。</div></div><div class="mag-card" data-anim><div class="label">Community</div><div class="title">常态化社群流量</div><div class="desc">持续落地线下活动，带来稳定免费客流与曝光。</div></div><div class="mag-card" data-anim><div class="label">Format</div><div class="title">差异化业态互补</div><div class="desc">区别于常规运动零售，丰富商场业态矩阵。</div></div><div class="mag-card" data-anim><div class="label">Long-term</div><div class="title">本土口碑与长效运营</div><div class="desc">通过全渠道运营提升消费活力与复购率。</div></div></div></div>
   <div class="foot"><div>Mall Value Proposition</div><div>GOONE</div></div>
 </section>
 
 <section class="slide light">
-  <img class="brand-mark" src="images/goone-logo.png" alt="古壹户外"><div class="chrome"><div>Audience · Customer Profile</div><div>12 / 17</div></div>
+  <img class="brand-mark" src="images/goone-logo.png" alt="古壹户外"><div class="chrome"><div>Partners · Cooperation Network</div><div>12 / 18</div></div>
+  <div class="frame" style="padding-top:3vh"><div class="kicker" data-anim>核心合作单位 / 服务案例</div><h2 class="h-xl" data-anim>多元机构长期合作，验证专业服务与稳定交付能力。</h2><p class="page-note" style="margin-top:1.2vh" data-anim>覆盖能源、水务、教育、公共服务及企事业单位等多元场景。</p><div class="partner-logo-grid" data-anim><div class="partner-logo-card logo-sinopec"><img src="images/partners/sinopec-clean.webp" alt="中石化标志"></div><div class="partner-logo-card"><img class="logo-tall" src="images/partners/cnpc-correct.jpg" alt="中国石油标志"></div><div class="partner-logo-card"><img class="logo-tall" src="images/partners/state-grid-round.png" alt="国家电网标志"></div><div class="partner-logo-card logo-compact"><img src="images/partners/zjenergy.png" alt="浙江能源集团标志"></div><div class="partner-logo-card"><img class="logo-tall" src="images/partners/huashi-tonglu.webp" alt="华师桐庐学校标志"></div><div class="partner-logo-card"><img src="images/partners/zju.png" alt="浙江大学标志"></div><div class="partner-logo-card logo-giuseppe"><img src="images/partners/giuseppe-user.webp" alt="乔治白标志"></div><div class="partner-logo-card logo-water"><img src="images/partners/taizhou-water-cropped.png" alt="台州水务标志"></div><div class="partner-logo-card"><img src="images/partners/zjnrg.ico" alt="浙江自然资源集团标志"></div><div class="partner-logo-card"><img class="logo-tall" src="images/partners/taizhou-airport.webp" alt="台州机场标志"></div><div class="partner-logo-card"><img src="images/partners/wenlan-school.png" alt="杭州文澜实验学校标志"></div><div class="partner-logo-card logo-compact"><img src="images/partners/ztwb.png" alt="浙江中通文博标志"></div></div></div>
+  <div class="foot"><div>12 Key Partners</div><div>Trusted Cooperation</div></div>
+</section>
+
+<section class="slide light">
+  <img class="brand-mark" src="images/goone-logo.png" alt="古壹户外"><div class="chrome"><div>Audience · Customer Profile</div><div>13 / 18</div></div>
   <div class="frame grid-2-7-5" style="padding-top:6vh"><div><div class="kicker" data-anim>精准高净值人群</div><h2 class="h-xl" data-anim>25—55 岁城市高消费力户外生活人群。</h2><div class="grid-3" style="margin-top:5vh"><div class="stat-card" data-anim><div class="stat-label">Age</div><div class="stat-nb">25-55</div><div class="stat-note">城市白领、职场精英、品质家庭、运动爱好者。</div></div><div class="stat-card" data-anim><div class="stat-label">Spend</div><div class="stat-nb">2000-6000</div><div class="stat-note">主力客单适配中高端商场消费层级。</div></div></div></div><div class="compact-list" data-anim><div><b>01</b><span>专业户外人群：登山、攀岩、越野跑、深度徒步爱好者。</span></div><div><b>02</b><span>城市运动人群：骑行、慢跑、日常健身运动人群。</span></div><div><b>03</b><span>年轻潮流客群：Z 世代城市机能穿搭、轻户外潮流爱好者。</span></div><div><b>04</b><span>亲子家庭客群：自然教育、亲子轻户外、周末休闲品质家庭。</span></div></div></div>
   <div class="foot"><div>High Value Customers</div><div>25-55</div></div>
 </section>
 
 <section class="slide hero light">
-  <img class="brand-mark" src="images/goone-logo.png" alt="古壹户外"><div class="chrome"><div>Community · Running</div><div>13 / 17</div></div>
-  <div class="frame" style="padding-top:5vh"><div class="kicker" data-anim>社群活动 / 跑步</div><h2 class="h-xl" data-anim>18 年本土社群运营积淀，形成成熟活跃的户外社群体系。</h2><div class="image-grid-4" data-anim><figure class="frame-img h-22"><img src="images/13-trail-run.png" alt="徒步登山" style="object-position:center 40%"><figcaption class="img-cap">徒步登山</figcaption></figure><figure class="frame-img h-22"><img src="images/13-running-camp.png" alt="群山徒步" style="object-position:center 35%"><figcaption class="img-cap">群山徒步</figcaption></figure><figure class="frame-img h-22"><img src="images/13-mountain-hike.jpg" alt="跑步训练营" style="object-position:center center"><figcaption class="img-cap">跑步训练营</figcaption></figure><figure class="frame-img h-22"><img src="images/13-community.jpg" alt="社群活动" style="object-position:center 32%"><figcaption class="img-cap">社群活动</figcaption></figure></div></div>
+  <img class="brand-mark" src="images/goone-logo.png" alt="古壹户外"><div class="chrome"><div>Community · Running</div><div>14 / 18</div></div>
+  <div class="frame" style="padding-top:5vh"><div class="kicker" data-anim>社群活动 / 跑步</div><h2 class="h-xl" data-anim>19 年本土社群运营积淀，形成成熟活跃的户外社群体系。</h2><div class="image-grid-4" data-anim><figure class="frame-img h-22"><img src="images/13-trail-run.png" alt="徒步登山" style="object-position:center 40%"><figcaption class="img-cap">徒步登山</figcaption></figure><figure class="frame-img h-22"><img src="images/13-running-camp.png" alt="群山徒步" style="object-position:center 35%"><figcaption class="img-cap">群山徒步</figcaption></figure><figure class="frame-img h-22"><img src="images/13-mountain-hike.jpg" alt="跑步训练营" style="object-position:center center"><figcaption class="img-cap">跑步训练营</figcaption></figure><figure class="frame-img h-22"><img src="images/13-community.jpg" alt="社群活动" style="object-position:center 32%"><figcaption class="img-cap">社群活动</figcaption></figure></div></div>
   <div class="foot"><div>1000人+ 运动户外社群</div><div>Image slots reserved</div></div>
 </section>
 
 <section class="slide light">
-  <img class="brand-mark" src="images/goone-logo.png" alt="古壹户外"><div class="chrome"><div>Community · Seasons & Family</div><div>14 / 17</div></div>
-  <div class="frame" style="padding-top:4.2vh"><div class="kicker" data-anim>春秋 · 夏季 · 冬季 · 亲子户外</div><h2 class="h-xl" style="font-size:5.4vw" data-anim>覆盖全年龄段用户，把商场活动延展到全年户外生活。</h2><div class="image-grid-4 compact" data-anim><figure class="frame-img h-22"><img src="images/14-spring-hike.png" alt="春秋徒步活动" style="object-position:center 40%"><figcaption class="img-cap">春秋徒步</figcaption></figure><figure class="frame-img h-22"><img src="images/14-summer-paddleboard.png" alt="夏季浆板活动" style="object-position:center center"><figcaption class="img-cap">夏季浆板</figcaption></figure><figure class="frame-img h-22"><img src="images/14-winter-outdoor.png" alt="冬季户外活动" style="object-position:center 35%"><figcaption class="img-cap">冬季户外</figcaption></figure><figure class="frame-img h-22"><img src="images/14-parent-child.png" alt="亲子户外活动" style="object-position:center 30%"><figcaption class="img-cap">亲子户外</figcaption></figure></div><div class="grid-3" style="margin-top:2.4vh" data-anim><div class="stat-card"><div class="stat-label">Outdoor Community</div><div class="stat-nb">1000<span class="stat-unit">人+</span></div><div class="stat-note">运动户外社群。</div></div><div class="stat-card"><div class="stat-label">Family Group</div><div class="stat-nb">500<span class="stat-unit">人+</span></div><div class="stat-note">亲子户外活动群。</div></div><div class="stat-card"><div class="stat-label">Membership</div><div class="stat-nb">3<span class="stat-unit">级</span></div><div class="stat-note">普卡、金卡、黑卡权益。</div></div></div></div>
-  <div class="foot"><div>Community Engine</div><div>Membership System</div></div>
-</section>
-
-<section class="slide light">
-  <img class="brand-mark" src="images/goone-logo.png" alt="古壹户外"><div class="chrome"><div>Omni-channel · Closed Loop</div><div>15 / 17</div></div>
+  <img class="brand-mark" src="images/goone-logo.png" alt="古壹户外"><div class="chrome"><div>Omni-channel · Closed Loop</div><div>15 / 18</div></div>
   <div class="frame" style="padding-top:6vh"><div class="kicker" data-anim>线上线下一体化</div><h2 class="h-xl" data-anim>线上种草引流，线下体验转化，私域留存复购。</h2><div class="pipeline-section" data-anim><div class="pipeline-label">Traffic Loop</div><div class="pipeline" data-cols="5"><div class="step"><div class="step-nb">01</div><div class="step-title">内容种草</div><div class="step-desc">小程序商城、公众号、小红书新媒体。</div></div><div class="step"><div class="step-nb">02</div><div class="step-title">公域触达</div><div class="step-desc">美团、高德门店流量与活动信息分发。</div></div><div class="step"><div class="step-nb">03</div><div class="step-title">线下体验</div><div class="step-desc">沉浸式门店完成体验、成交、转化。</div></div><div class="step"><div class="step-nb">04</div><div class="step-title">企微服务</div><div class="step-desc">一对一专属服务与会员 CRM 管理。</div></div><div class="step"><div class="step-nb">05</div><div class="step-title">留存复购</div><div class="step-desc">积分体系、常态化活动沉淀稳定客流与消费数据。</div></div></div></div></div>
   <div class="foot"><div>Online + Offline</div><div>Private Domain</div></div>
 </section>
 
 <section class="slide light">
-  <img class="brand-mark" src="images/goone-logo.png" alt="古壹户外"><div class="chrome"><div>Upgrade Result · Evidence</div><div>16 / 17</div></div>
+  <img class="brand-mark" src="images/goone-logo.png" alt="古壹户外"><div class="chrome"><div>Community · Seasons & Family</div><div>16 / 18</div></div>
+  <div class="frame" style="padding-top:4.2vh"><div class="kicker" data-anim>春秋 · 夏季 · 冬季 · 亲子户外</div><h2 class="h-xl" style="font-size:5.4vw" data-anim>覆盖全年龄段用户，把商场活动延展到全年户外生活。</h2><div class="image-grid-4 compact" data-anim><figure class="frame-img h-22"><img src="images/14-spring-hike.png" alt="春秋徒步活动" style="object-position:center 40%"><figcaption class="img-cap">春秋徒步</figcaption></figure><figure class="frame-img h-22"><img src="images/14-summer-paddleboard.png" alt="夏季浆板活动" style="object-position:center center"><figcaption class="img-cap">夏季浆板</figcaption></figure><figure class="frame-img h-22"><img src="images/14-winter-outdoor.png" alt="冬季户外活动" style="object-position:center 35%"><figcaption class="img-cap">冬季户外</figcaption></figure><figure class="frame-img h-22"><img src="images/14-parent-child.png" alt="亲子户外活动" style="object-position:center 30%"><figcaption class="img-cap">亲子户外</figcaption></figure></div><div class="grid-3" style="margin-top:2.4vh" data-anim><div class="stat-card"><div class="stat-label">Outdoor Community</div><div class="stat-nb">1000<span class="stat-unit">人+</span></div><div class="stat-note">运动户外社群。</div></div><div class="stat-card"><div class="stat-label">Family Group</div><div class="stat-nb">500<span class="stat-unit">人+</span></div><div class="stat-note">亲子户外活动群。</div></div><div class="stat-card"><div class="stat-label">Membership</div><div class="stat-nb">3<span class="stat-unit">级</span></div><div class="stat-note">普卡、金卡、黑卡权益。</div></div></div></div>
+  <div class="foot"><div>Community Engine</div><div>Membership System</div></div>
+</section>
+
+<section class="slide light">
+  <img class="brand-mark" src="images/goone-logo.png" alt="古壹户外"><div class="chrome"><div>Upgrade Result · Evidence</div><div>17 / 18</div></div>
   <div class="frame grid-2-6-6" style="padding-top:6vh"><div><div class="kicker" data-anim>2023 年后升级成果</div><h2 class="h-xl" data-anim>综合运营能力、业态竞争力、用户服务体系全面成熟。</h2><p class="page-note" style="margin-top:3vh" data-anim>这不是新概念招商，而是已经跑通的城市户外商业模型。</p><div class="brand-strip" data-anim><span>品牌专区</span><span>会员体系</span><span>企微私域</span><span>公域引流</span></div></div><div data-anim><div class="compact-list"><div><b>01</b><span>第三家直营门店落地，完成杭州三区核心布局。</span></div><div><b>02</b><span>凯乐石、攀山鼠、Houdini 等高端品牌专区搭建完成。</span></div><div><b>03</b><span>线上线下一体化全域运营模式落地。</span></div><div><b>04</b><span>企微一对一客户服务与普卡 / 金卡 / 黑卡会员体系上线。</span></div><div><b>05</b><span>500+ 亲子户外社群与美团、高德等公域流量平台数据沉淀。</span></div></div><div class="callout" style="margin-top:3vh">为合作商场提供可复制、可运营、可持续的城市户外业态模型。</div></div></div>
   <div class="foot"><div>Operating Evidence</div><div>Since 2023</div></div>
 </section>
 
 <section class="slide hero light">
-  <img class="brand-mark" src="images/goone-logo.png" alt="古壹户外"><div class="chrome"><div>Closing · Brand Emotion</div><div>17 / 17</div></div>
-  <div class="frame grid-2-7-5" style="padding-top:8vh"><div><div class="kicker" data-anim>结束页</div><div class="quote-giant" data-anim>把户外，带进城市生活的下一站。</div><div class="meta-row" style="margin-top:6vh" data-anim><span>Retail</span><span>·</span><span>Community</span><span>·</span><span>Content</span><span>·</span><span>Long-term</span></div><div class="callout" style="margin-top:3vh" data-anim>共同打造商场里的城市户外目的地。</div></div><div><p class="lead" data-anim>古壹户外 GOONE 希望与商场共同打造一个兼具专业装备、生活方式、社群活动与长期运营能力的城市户外目的地。</p><div class="img-slot r-16x9" style="margin-top:5vh" data-anim><div class="plus">+</div><div class="label">合作商场 / 门店氛围图片框</div></div></div></div>
+  <img class="brand-mark" src="images/goone-logo.png" alt="古壹户外"><div class="chrome"><div>Closing · Brand Emotion</div><div>18 / 18</div></div>
+  <div class="frame grid-2-7-5" style="padding-top:7vh;grid-template-columns:6.5fr 5.5fr;gap:5vw"><div><div class="kicker" data-anim>结束页 / 合作展望</div><div class="quote-giant" data-anim>把户外，带进城市生活的下一站。</div><div class="meta-row" style="margin-top:5vh" data-anim><span>Retail</span><span>·</span><span>Community</span><span>·</span><span>Content</span><span>·</span><span>Long-term</span></div><div class="callout" style="margin-top:3vh" data-anim><span class="q-big">共同打造商场里的城市户外目的地。</span></div></div><div style="padding-top:1.5vh"><p class="lead" style="font-size:1.62vw;line-height:1.55" data-anim>古壹户外 GOONE 希望与商场共同打造一个兼具专业装备、生活方式、社群活动与长期运营能力的城市户外目的地。</p><div class="compact-list" style="margin-top:4vh" data-anim><div><b>01</b><span>以 90+ 品牌矩阵与高端专区，构建差异化城市户外消费场景。</span></div><div><b>02</b><span>以常态化社群活动与内容运营，为商场持续引入高质量客群。</span></div><div><b>03</b><span>以成熟门店经验和全域运营体系，沉淀长期稳定的商业价值。</span></div></div><div class="meta-row" style="margin-top:4.2vh" data-anim><span>GOONE OUTDOOR</span><span>·</span><span>城野两栖，壹种自由</span></div></div></div>
   <div class="foot"><div>Thank You</div><div>GOONE OUTDOOR</div></div>
 </section>
 </div>
